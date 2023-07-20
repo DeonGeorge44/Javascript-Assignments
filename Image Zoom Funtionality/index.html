@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flipkart Image Zoom Functionanlity</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="image-container">
+                <img src="https://i.pinimg.com/236x/63/f6/26/63f626818290defb32225813345748e0.jpg" alt="Tesla " />
+                <span></span>
+            </div>
+            <!-- image list -->
+            <ul class="list-products">
+                <li></li>
+            </ul>
+        </div>
+
+        <script src="script.js" type="text/javascript">
+             const imgContElm = document.querySelector(".image-container");
+             const imgElm=document.querySelector(".img-container img");
+             const zoom=300;
+
+            imgContElm.addEventListener('mouseenter',function(){
+                imgElm.style.width= ZOOM + '%';
+            });
+
+            imgContElm.addEventListener('mouseleave',function(){
+               imgElm.style.width='100%';
+               imgElm.style.top='0';
+               imgElm.style.left='100%';
+
+
+            })
+        </script>
+    </body>
+</html>
